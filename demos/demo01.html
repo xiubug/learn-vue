@@ -41,6 +41,7 @@
     </div>
     <div id="app7">
         <ul>
+        	<!-- todo-item组件实例 -->
             <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
         </ul>
     </div>
@@ -68,7 +69,7 @@
     setTimeout(function() {
         app2.message = 'title属性变化了！';
     }, 2000);
-    
+
     // 3、使用v-if指令进行绑定DOM结构到数据(条件判断)。
     var app3 = new Vue({
         el: '#app3',
@@ -124,7 +125,7 @@
     }, 5000);
 
     // 7、用组件构建(应用)
-    Vue.component('todo-item', {
+    Vue.component('todo-item', { // 定义了一个叫做todo-item的组件
         props: ['todo'],
         template: '<li>{{todo.text}}</li>'
     });
