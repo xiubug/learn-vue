@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vuejs-demo1</title>
+    <style>
+    input {
+        width: 200px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="app1">
+        {{message}}
+    </div>
+    <div id="app2">
+        <span v-bind:title="message">
+			使用v-bind绑定进行绑定
+		</span>
+    </div>
+    <div id="app3">
+        <p v-if="greet">使用v-if条件指令进行绑定DOM结构到数据</p>
+    </div>
+    <div id="app4">
+        <p>使用v-for循环指令进行绑定数据到数据来渲染列表</p>
+        <ul>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ul>
+    </div>
+    <div id="app5">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+    <div id="app6">
+        <p>{{message}}</p>
+        <input type="text" v-model="message" />
+    </div>
+    <div id="app7">
+        <ul>
+            <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+        </ul>
+    </div>
+    <script type="text/javascript" src="lib/vue.js"></script>
+    <script type="text/javascript">
+    // 1、将数据和DOM已经被绑定在一起(Hello Vue!)。
+    var app1 = new Vue({
+        el: '#app1',
+        data: {
+            message: 'Hello Vue!'
+        }
+    });
+
+    setTimeout(function() {
+        app1.message = 'Hello Vue变化了！'
+    }, 1000);
+
+    // 2、将元素节点的title属性和Vue实例的message属性绑定到一起(标签属性)。
+    var app2 = new Vue({
+        el: '#app2',
+        data: {
+            message: 'span的title属性'
+        }
+    });
+    setTimeout(function() {
+        app2.message = 'title属性变化了！';
+    }, 2000);
+    
+    // 3、使用v-if指令进行绑定DOM结构到数据(条件判断)。
+    var app3 = new Vue({
+        el: '#app3',
+        data: {
+            greet: true
+        }
+    });
+    setTimeout(function() {
+        app3.greet = false;
+    }, 3000);
+
+    // 4、使用v-for循环指令进行绑定数据到数据来渲染列表(循环)
+    var app4 = new Vue({
+        el: '#app4',
+        data: {
+            todos: [{
+                text: 'Learn JavaScript'
+            }, {
+                text: 'Learn Vue'
+            }, {
+                text: 'Build something awesome'
+            }]
+        }
+    });
+    setTimeout(function() {
+        app4.todos.push({
+            text: 'New item'
+        });
+    }, 4000);
+
+    // 5、使用v-on指令进行绑定监听事件
+    var app5 = new Vue({
+        el: '#app5',
+        data: {
+            message: '使用v-on指令进行绑定监听事件'
+        },
+        methods: {
+            reverseMessage: function() {
+                this.message = this.message.split('').reverse().join('');
+            }
+        }
+    });
+
+    // 6、使用v-model指令进行双向数据绑定
+    var app6 = new Vue({
+        el: '#app6',
+        data: {
+            message: '使用v-model指令进行双向数据绑定'
+        }
+    });
+    setTimeout(function() {
+        app6.message = '双向数据变化了！';
+    }, 5000);
+
+    // 7、用组件构建(应用)
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{todo.text}}</li>'
+    });
+    var app7 = new Vue({
+        el: '#app7',
+        data: {
+            groceryList: [{
+                text: 'Vegetables'
+            }, {
+                text: 'Cheese'
+            }, {
+                text: 'Whatever else humans are supposed to eat'
+            }]
+        }
+    });
+    </script>
+</body>
+
+</html>
