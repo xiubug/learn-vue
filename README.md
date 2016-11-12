@@ -1,8 +1,12 @@
 # vue-demos
 重温Vue.js，并将二次学习成果整理成demo分享给大家(v2.0.5)
+##收集了Vue开发中遇到的各种坑、注意事项以及相对解决方案
+知识点一、Vue实例只有这些被代理的属性是响应的。如果在实例创建之后添加新的属性到实例上，它不会触发视图更新。详细请参考[响应系统](http://cn.vuejs.org/v2/guide/reactivity.html)。
 
+知识点二、不要在实例属性或者回调函数中（如 vm.$watch('a', newVal => this.myMethod())）使用箭头函数。因为箭头函数绑定父上下文，所以 this 不会像预想的一样是 Vue 实例，而是 this.myMethod 未被定义。
+
+##二次学习整理成的demo
 ### Demo01: 该示例主要对Vue.js做一个大致的介绍，大致展示了以下几个功能：
-
 [demo01](https://github.com/sosout/vue-demos/blob/master/demos/demo01.html) 
 
 * 知识点一、将数据和DOM已经被绑定在一起({{  }})。

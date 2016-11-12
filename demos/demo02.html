@@ -12,8 +12,31 @@
 </head>
 
 <body>
+    <h2 id="example">该示例主要对Vue.js实例做一个大致的介绍，大致展示了以下几个功能：</h2>
     <script type="text/javascript" src="lib/vue.js"></script>
     <script type="text/javascript">
+    // 1、每个 Vue 实例都会代理其 data 对象里所有的属性
+    var data1 = {
+        a: 1
+    };
+    var vm1 = new Vue({
+        data: data1
+    });
+    console.log(vm1.a === data1.a); // -> true
+    // 设置属性也会影响到原始数据
+    vm1.a = 2;
+    console.log(data1.a); // -> 2
+    // ... 反之亦然
+
+    //2、除了 data 属性， Vue 实例暴露了一些有用的实例属性与方法。
+    var data2 = {
+        a: 1
+    };
+    var vm2 = new Vue({
+        el: '#example',
+        data: data2
+    });
+    console.log(vm2.$data === data2); // -> true
     </script>
 </body>
 
