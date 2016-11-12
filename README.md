@@ -18,8 +18,6 @@
 [demo02](https://github.com/sosout/vue-demos/blob/master/demos/demo02.html) 
 
 1. 构造器
-* 第二步 在代码中引入ModelProxy模块，并且初始化引入接口配置文件（在实际项目中，引入初始化文件动作应伴随工程项目启动时完成，有且只有一次）
-
 ```js
 // 引入模块
 var ModelProxy = require( 'modelproxy' ); 
