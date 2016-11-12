@@ -28,10 +28,38 @@ var MyComponent = Vue.extend({
   // 扩展选项
 })
 
-// 所有的 `MyComponent` 实例都将以预定义的扩展选项被创建
+// 所有的`MyComponent`实例都将以预定义的扩展选项被创建
 var myComponentInstance = new MyComponent()
-
 ```
 
 * 知识点二、属性与方法
+
+```js
+// 1、每个Vue实例都会代理其data对象里所有的属性：
+var data = { a: 1 }
+var vm = new Vue({
+  data: data
+})
+vm.a === data.a // -> true
+// 设置属性也会影响到原始数据
+vm.a = 2
+data.a // -> 2
+// ... 反之亦然
+data.a = 3
+vm.a // -> 3
+
+// 2、除了data属性， Vue实例暴露了一些有用的实例属性与方法
+var data = { a: 1 }
+var vm = new Vue({
+  el: '#example',
+  data: data
+})
+vm.$data === data // -> true
+vm.$el === document.getElementById('example') // -> true
+// $watch 是一个实例方法
+vm.$watch('a', function (newVal, oldVal) {
+  // 这个回调将在`vm.a`改变后调用
+})
+```
+
 * 知识点三、实例生命周期
