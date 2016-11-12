@@ -5,13 +5,13 @@
 
 [demo01](https://github.com/sosout/vue-demos/blob/master/demos/demo01.html) 
 
-1. 将数据和DOM已经被绑定在一起({{  }})。
-1. 将元素节点的title属性和Vue实例的message属性绑定到一起(v-bind)。
-1. 使用v-if指令进行绑定DOM结构到数据(v-if)。
-1. 使用v-for循环指令进行绑定数据到数据来渲染列表(v-for)。
-1. 使用v-on指令进行绑定监听事件(v-on)。
-1. 使用v-model指令进行双向数据绑定(v-model)
-1. 用组件构建(应用)
+* 知识点一、将数据和DOM已经被绑定在一起({{  }})。
+* 知识点二、将元素节点的title属性和Vue实例的message属性绑定到一起(v-bind)。
+* 知识点三、使用v-if指令进行绑定DOM结构到数据(v-if)。
+* 知识点四、使用v-for循环指令进行绑定数据到数据来渲染列表(v-for)。
+* 知识点五、使用v-on指令进行绑定监听事件(v-on)。
+* 知识点六、使用v-model指令进行双向数据绑定(v-model)
+* 知识点七、用组件构建(应用)
 
 ### Demo02: 该示例主要对Vue.js实例做一个大致的介绍，大致展示了以下几个功能：
 [demo02](https://github.com/sosout/vue-demos/blob/master/demos/demo02.html) 
