@@ -25,5 +25,5 @@ var ModelProxy = require( 'modelproxy' );
 // 初始化引入接口配置文件  （注意：初始化工作有且只有一次）
 ModelProxy.init( './interface_sample.json' );
 ```
-1. 属性与方法
-1. 实例生命周期
+2. 属性与方法
+3. 实例生命周期
