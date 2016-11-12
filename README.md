@@ -91,7 +91,8 @@ var vm = new Vue({
 ### Demo03: 该示例主要对Vue模板语法做一个大致的介绍，大致展示了以下几个功能：
 [demo03](https://github.com/sosout/vue-demos/blob/master/demos/demo03.html) 
 * 知识点一、插值
-文本
+
+###### 文本
 ```js
 // 数据绑定最常见的形式就是使用 “Mustache” 语法（双大括号）的文本插值
 <span>Message: {{ msg }}</span>
