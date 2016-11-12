@@ -16,19 +16,20 @@
 ### Demo02: 该示例主要对Vue.js实例做一个大致的介绍，大致展示了以下几个功能：
 [demo02](https://github.com/sosout/vue-demos/blob/master/demos/demo02.html) 
 * 知识点一、构造器
-```// 1、通过构造函数Vue创建一个Vue的根实例
+
+```js
+// 1、通过构造函数Vue创建一个Vue的根实例
 var vm = new Vue({
 	// 选项
 })
 
+// 2、扩展Vue构造器，从而用预定义选项创建可复用的组件构造器
 var MyComponent = Vue.extend({
   // 扩展选项
 })
 
 // 所有的 `MyComponent` 实例都将以预定义的扩展选项被创建
 var myComponentInstance = new MyComponent()
-
-// 2、扩展Vue构造器，从而用预定义选项创建可复用的组件构造器
 
 ```
 
