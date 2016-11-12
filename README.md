@@ -92,11 +92,53 @@ var vm = new Vue({
 [demo03](https://github.com/sosout/vue-demos/blob/master/demos/demo03.html) 
 * 知识点一、插值
 
-###### 文本
+#### 文本
 ```js
 // 数据绑定最常见的形式就是使用 “Mustache” 语法（双大括号）的文本插值
 <span>Message: {{ msg }}</span>
 
 // 通过使用 v-once 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。但请留心这会影响到该节点上所有的数据绑定
 <span v-once>This will never change: {{ msg }}</span>
+```
+#### 属性
+```js
+// Mustache 不能在 HTML 属性中使用，应使用 v-bind 指令
+<div v-bind:id="dynamicId"></div>
+// 这对布尔值的属性也有效 —— 如果条件被求值为 false 的话该属性会被移除
+<button v-bind:disabled="someDynamicCondition">Button</button>
+```
+####使用JavaScript表达式
+```js
+// vue.js 都提供了完全的 JavaScript 表达式支持。
+{{ number + 1 }}
+{{ ok ? 'YES' : 'NO' }}
+{{ message.split('').reverse().join('') }}
+<div v-bind:id="'list-' + id"></div>
+// 有个限制就是，每个绑定都只能包含单个表达式，所以下面的例子都不会生效。
+<!-- 这是语句，不是表达式 -->
+{{ var a = 1 }}
+<!-- 流控制也不会生效，请使用三元表达式 -->
+{{ if (ok) { return message } }}
+// 模板表达式都被放在沙盒中，只能访问全局变量的一个白名单，如 Math 和 Date 。你不应该在模板表达式中试图访问用户定义的全局变量。
+```
+####过滤器
+```js
+// Vue.js 允许你自定义过滤器，被用作一些常见的文本格式化。过滤器应该被添加在 mustache 插值的尾部，由“管道符”指示：
+{{ message | capitalize }}
+// 过滤器函数总接受表达式的值作为第一个参数
+new Vue({
+  // ...
+  filters: {
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
+  }
+})
+// 过滤器可以串联
+{{ message | filterA | filterB }}
+// 过滤器是 JavaScript 函数，因此可以接受参数
+{{ message | filterA('arg1', arg2) }}
+// 这里，字符串 'arg1' 将传给过滤器作为第二个参数， arg2 表达式的值将被求值然后传给过滤器作为第三个参数。
 ```

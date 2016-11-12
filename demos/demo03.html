@@ -15,6 +15,11 @@
     <h2 id="example">该示例主要对Vue模板语法做一个大致的介绍</h2>
     <div id="app1" v-once>This will never change: {{ msg }}</div>
     <div id="app2" v-html="rawHtml"></div>
+    <button id="app3" v-bind:disabled="someDynamicCondition">Button</button>
+    <div id="app4">
+        <p>{{number + 1}}{{ok ? 'yes' : 'no'}} {{ message.split('').reverse().join('') }}</p>
+        <p v-bind:id="'list-' + id"></p>
+    </div>
     <script type="text/javascript" src="lib/vue.js"></script>
     <script type="text/javascript">
     // 使用v-once 和 “Mustache” 语法（双大括号）进行文本插值
@@ -34,6 +39,29 @@
         el: '#app2',
         data: {
             rawHtml: '<h2>rawHtml</h2>'
+        }
+    });
+
+    // Mustache 不能在 HTML 属性中使用，应使用 v-bind 指令
+    var vm3 = new Vue({
+        el: '#app3',
+        data: {
+            someDynamicCondition: false
+        }
+    });
+
+    setTimeout(function() {
+        vm3.someDynamicCondition = true;
+    }, 3000);
+
+    // 使用JavaScript表达式
+    var vm4 = new Vue({
+        el: '#app4',
+        data: {
+            number: 2,
+            ok: true,
+            message: 'hello',
+            id: 'vbind'
         }
     });
     </script>
