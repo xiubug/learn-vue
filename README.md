@@ -67,3 +67,16 @@ vm.$watch('a', function (newVal, oldVal) {
 ```
 
 * 知识点三、实例生命周期
+
+```js
+var vm = new Vue({
+  data: {
+    a: 1
+  },
+  created: function () {
+    // `this` 指向 vm 实例
+    console.log('a is: ' + this.a); // -> "a is: 1"
+  }
+});
+// 也有一些其它的钩子，在实例生命周期的不同阶段调用，如 mounted、 updated 、destroyed 。钩子的 this 指向调用它的 Vue 实例。
+```

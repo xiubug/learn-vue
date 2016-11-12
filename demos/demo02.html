@@ -37,6 +37,22 @@
         data: data2
     });
     console.log(vm2.$data === data2); // -> true
+    console.log(vm2.$el === document.getElementById('example')); // -> true
+    // $watch 是一个实例方法
+    vm2.$watch('a', function(newVal, oldVal) {
+        // 这个回调将在 `vm.a`  改变后调用
+    });
+
+    // 3、实例生命周期
+    var vm3 = new Vue({
+        data: {
+            a: 1
+        },
+        created: function() {
+            // this 指向vm实例
+            console.log('a is:' + this.a);
+        }
+    });
     </script>
 </body>
 
