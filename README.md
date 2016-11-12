@@ -80,3 +80,5 @@ var vm = new Vue({
 });
 // 也有一些其它的钩子，在实例生命周期的不同阶段调用，如 mounted、 updated 、destroyed 。钩子的 this 指向调用它的 Vue 实例。
 ```
+![](https://github.com/sosout/vue-demos/blob/master/demos/images/lifecycle.png)
+![](https://github.com/sosout/vue-demos/blob/master/demos/images/lifecycle-hooks.png)
