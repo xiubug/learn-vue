@@ -5,11 +5,15 @@
 
 知识点二、不要在实例属性或者回调函数中（如 vm.$watch('a', newVal => this.myMethod())）使用箭头函数。因为箭头函数绑定父上下文，所以 this 不会像预想的一样是 Vue 实例，而是 this.myMethod 未被定义。
 
+知识点三、使用 v-once 指令执行一次性地插值，当数据改变时，插值处的内容不会更新。但请注意这会影响到该节点上所有的数据绑定
+
+知识点四、注意：你不能使用v-html来复合局部模板，因为Vue不是基于字符串的模板引擎。组件更适合担任UI重用与复合的基本单元。你的站点上动态渲染的任意HTML可能会非常危险，因为它很容易导致 XSS 攻击。请只对可信内容使用HTML插值，绝不要对用户提供的内容插值。
+
 ##二次学习整理成的demo
 ### Demo01: 该示例主要对Vue.js做一个大致的介绍，大致展示了以下几个功能：
 [demo01](https://github.com/sosout/vue-demos/blob/master/demos/demo01.html) 
 
-* 知识点一、将数据和DOM已经被绑定在一起({{  }})。
+* 知识点一、将数据和DOM已经被绑定在一起(Mustache” 语法（双大括号）)。
 * 知识点二、将元素节点的title属性和Vue实例的message属性绑定到一起(v-bind)。
 * 知识点三、使用v-if指令进行绑定DOM结构到数据(v-if)。
 * 知识点四、使用v-for循环指令进行绑定数据到数据来渲染列表(v-for)。
@@ -17,7 +21,7 @@
 * 知识点六、使用v-model指令进行双向数据绑定(v-model)
 * 知识点七、用组件构建(应用)
 
-### Demo02: 该示例主要对Vue.js实例做一个大致的介绍，大致展示了以下几个功能：
+### Demo02: 该示例主要对Vue实例做一个大致的介绍，大致展示了以下几个功能：
 [demo02](https://github.com/sosout/vue-demos/blob/master/demos/demo02.html) 
 * 知识点一、构造器
 
@@ -80,5 +84,18 @@ var vm = new Vue({
 });
 // 也有一些其它的钩子，在实例生命周期的不同阶段调用，如 mounted、 updated 、destroyed 。钩子的 this 指向调用它的 Vue 实例。
 ```
+* 知识点四、生命周期图示
 ![](https://github.com/sosout/vue-demos/blob/master/demos/images/lifecycle.png)
 ![](https://github.com/sosout/vue-demos/blob/master/demos/images/lifecycle-hooks.png)
+
+### Demo03: 该示例主要对Vue模板语法做一个大致的介绍，大致展示了以下几个功能：
+[demo03](https://github.com/sosout/vue-demos/blob/master/demos/demo03.html) 
+* 知识点一、插值
+文本
+```js
+// 数据绑定最常见的形式就是使用 “Mustache” 语法（双大括号）的文本插值
+<span>Message: {{ msg }}</span>
+
+// 通过使用 v-once 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。但请留心这会影响到该节点上所有的数据绑定
+<span v-once>This will never change: {{ msg }}</span>
+```

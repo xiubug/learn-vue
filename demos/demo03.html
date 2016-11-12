@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vuejs-demo3</title>
+    <style>
+    input {
+        width: 200px;
+    }
+    </style>
+</head>
+
+<body>
+    <h2 id="example">该示例主要对Vue模板语法做一个大致的介绍</h2>
+    <div id="app1" v-once>This will never change: {{ msg }}</div>
+    <div id="app2" v-html="rawHtml"></div>
+    <script type="text/javascript" src="lib/vue.js"></script>
+    <script type="text/javascript">
+    // 使用v-once 和 “Mustache” 语法（双大括号）进行文本插值
+    var vm1 = new Vue({
+        el: '#app1',
+        data: {
+            msg: 'v-once'
+        }
+    });
+
+    setTimeout(function() {
+        vm1.msg = 'once';
+    }, 1000)
+
+    // 使用v-html进行文本插值
+    var vm2 = new Vue({
+        el: '#app2',
+        data: {
+            rawHtml: '<h2>rawHtml</h2>'
+        }
+    });
+    </script>
+</body>
+
+</html>
