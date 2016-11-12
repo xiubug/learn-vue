@@ -14,16 +14,23 @@
 1. 用组件构建(应用)
 
 ### Demo02: 该示例主要对Vue.js实例做一个大致的介绍，大致展示了以下几个功能：
-
 [demo02](https://github.com/sosout/vue-demos/blob/master/demos/demo02.html) 
+* 知识点一、构造器
+```// 1、通过构造函数Vue创建一个Vue的根实例
+var vm = new Vue({
+	// 选项
+})
 
-1. 构造器
-```js
-// 引入模块
-var ModelProxy = require( 'modelproxy' ); 
+var MyComponent = Vue.extend({
+  // 扩展选项
+})
 
-// 初始化引入接口配置文件  （注意：初始化工作有且只有一次）
-ModelProxy.init( './interface_sample.json' );
+// 所有的 `MyComponent` 实例都将以预定义的扩展选项被创建
+var myComponentInstance = new MyComponent()
+
+// 2、扩展Vue构造器，从而用预定义选项创建可复用的组件构造器
+
 ```
-2. 属性与方法
-3. 实例生命周期
+
+* 知识点二、属性与方法
+* 知识点三、实例生命周期
