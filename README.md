@@ -1,5 +1,6 @@
 # vue-demos
-重温Vue.js，并将二次学习成果整理成demo分享给大家(v2.0.5)
+###重温Vue.js，并将二次学习成果整理成demo分享给大家(v2.0.5)
+Vue.js团队对v2.0版本一次“完全改写”。
 ##收集了Vue开发中遇到的各种坑、注意事项以及相对解决方案
 知识点一、Vue实例只有这些被代理的属性是响应的。如果在实例创建之后添加新的属性到实例上，它不会触发视图更新。详细请参考[响应系统](http://cn.vuejs.org/v2/guide/reactivity.html)。
 
@@ -141,4 +142,38 @@ new Vue({
 // 过滤器是 JavaScript 函数，因此可以接受参数
 {{ message | filterA('arg1', arg2) }}
 // 这里，字符串 'arg1' 将传给过滤器作为第二个参数， arg2 表达式的值将被求值然后传给过滤器作为第三个参数。
+```
+####指令
+######指令（Directives）是带有 v- 前缀的特殊属性。指令属性的值预期是单一 JavaScript 表达式（除了v-for，之后再讨论）。指令的职责就是当其表达式的值改变时相应地将某些行为应用到 DOM 上。
+```js
+<p v-if="seen">Now you see me</p>
+```
+####参数
+######一些指令能接受一个“参数”，在指令后以冒号指明。例如， v-bind指令被用来响应地更新 HTML 属性：
+```js
+<p v-if="seen">Now you see me</p>
+```
+######另一个例子是 v-on 指令，它用于监听 DOM 事件：
+```js
+<a v-on:click="doSomething">
+```
+####修饰符
+######修饰符（Modifiers）是以半角句号 . 指明的特殊后缀，用于指出一个指定应该以特殊方式绑定。例如，.prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()：
+```js
+<form v-on:submit.prevent="onSubmit"></form>
+```
+####缩写
+######v-bind缩写
+```js
+<!-- 完整语法 -->
+<a v-bind:href="url"></a>
+<!-- 缩写 -->
+<a :href="url"></a>
+```
+######v-on缩写
+```js
+<!-- 完整语法 -->
+<a v-on:click="doSomething"></a>
+<!-- 缩写 -->
+<a @click="doSomething"></a>
 ```

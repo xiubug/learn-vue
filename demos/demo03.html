@@ -20,6 +20,15 @@
         <p>{{number + 1}}{{ok ? 'yes' : 'no'}} {{ message.split('').reverse().join('') }}</p>
         <p v-bind:id="'list-' + id"></p>
     </div>
+    <div id="app5">
+        {{message | capitalize}}
+    </div>
+    <div id="app6">
+        <!-- 完整语法 -->
+        <a v-bind:href="url">百度</a>
+        <!-- 缩写 -->
+        <a :href="url">百度</a>
+    </div>
     <script type="text/javascript" src="lib/vue.js"></script>
     <script type="text/javascript">
     // 使用v-once 和 “Mustache” 语法（双大括号）进行文本插值
@@ -62,6 +71,29 @@
             ok: true,
             message: 'hello',
             id: 'vbind'
+        }
+    });
+
+    // 过滤器
+    var vm5 = new Vue({
+        el: '#app5',
+        data: {
+            message: 'filter'
+        },
+        filters: {
+            capitalize: function(value) {
+                if (!value) return '';
+                value = value.toString();
+                return value.charAt(0).toUpperCase() + value.slice(1);
+            }
+        }
+    });
+
+    // 缩写
+    var vm6 = new Vue({
+        el: '#app6',
+        data: {
+            url: 'www.baidu.com'
         }
     });
     </script>
