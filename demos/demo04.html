@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>该示例主要对Vue计算属性做一个大致的介绍</title>
+    <style>
+    input {
+        width: 200px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="app1">
+        <p>Original message: "{{message}}"</p>
+        <p>Computed reversed message: "{{reversedMessage}}"</p>
+    </div>
+    <script type="text/javascript" src="lib/vue.js"></script>
+    <script type="text/javascript">
+    // 基础例子
+    var vm = new Vue({
+        el: '#app1',
+        data: {
+            message: 'Hello',
+        },
+        computed: {
+            reversedMessage: function() {
+                return this.message.split('').reverse().join('');
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>
