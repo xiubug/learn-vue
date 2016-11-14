@@ -335,3 +335,61 @@ var watchExampleVM = new Vue({
 })
 </script>
 ```
+### Demo05: 该示例主要对Vue的Class 与 Style 绑定做一个大致的介绍，大致展示了以下几个功能：
+[demo05](https://github.com/sosout/vue-demos/blob/master/demos/demo05.html)
+
+####绑定HTML Class
+######对象语法
+```html
+// 给v-bind:class一个对象，动态地切换class
+<div v-bind:class="{ active: isActive }"></div>
+```
+```html
+// 在对象中传入更多属性用来动态切换多个class。此外v-bind:class指令可以与普通的class属性共存
+<div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+```
+```html
+// 在对象中传入更多属性用来动态切换多个class。此外v-bind:class指令可以与普通的class属性共存
+<div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+```
+```html
+// 直接绑定数据里的一个对象
+<div v-bind:class="classObject"></div>
+```
+```js
+data: {
+   classObject: {
+    active: true,
+    'text-danger': false
+   }
+}
+```
+######绑定返回对象的计算属性
+```html
+<div v-bind:class="classObject"></div>
+```
+```js
+data: {
+  isActive: true,
+  error: null
+},
+computed: {
+  classObject: function() {
+    return {
+     active: this.isActive && !this.error,
+     'text-danger': this.error && this.error.type === 'fatal'
+    }
+  }
+}
+```
+######数组语法
+```html
+// 使用数组应用一个class列表
+<div v-bind:class="[activeClass, errorClass]"></div>
+```
+```js
+data: {
+  activeClass: 'active',
+  errorClass: 'text-danger'
+}
+```
