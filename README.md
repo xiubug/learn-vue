@@ -364,8 +364,8 @@ data: {
    }
 }
 ```
-######绑定返回对象的计算属性
 ```html
+// 绑定返回对象的计算属性
 <div v-bind:class="classObject"></div>
 ```
 ```js
@@ -392,4 +392,68 @@ data: {
   activeClass: 'active',
   errorClass: 'text-danger'
 }
+```
+```html
+// 用三元表达式切换列表中的class
+<div v-bind:class="[isActive ? activeClass: '', errorClass]"></div>
+```
+```html
+// 在数组语法中使用对象语法
+<div v-bind:class="[{active: isActive}, errorClass]"></div>
+```
+######在组件中使用
+```js
+// 声明组件
+Vue.component('my-component', {
+  template: '<p class="foo bar">Hi</p>'
+});
+```
+```html
+// 使用组件的添加写类
+<my-component class="baz boo"></my-component>
+```
+```html
+// 渲染后的HTML
+<p class="foo bar baz boo"></p>
+```
+```html
+// 在组件绑定class
+<my-component v-bind:class="{active: isActive}"></my-component>
+```
+```html
+// 当isActive为true，渲染后的html
+<div class="foo bar active"></div>
+```
+####绑定内联样式
+######对象语法
+```html
+<div v-bind:style="{color: activeColor, fontSize: fontSize + 'px'}"></div>
+```
+```js
+data: {
+  activeColor: 'red',
+  fontSize: 30
+}
+```
+```html
+// 绑定样式对象
+<div v-bind:style="styleObject"></div>
+```
+```js
+data: {
+  styleObject: {
+    color: 'red',
+    fontSize: '13px'
+  }
+}
+// 同样的，对象语法常常结合返回对象的计算属性使用。
+```
+######数组语法
+```html
+// 将多个样式对象应用到一个元素上
+<div v-bind:style="[baseStyles, overridingStyles]">
+```
+######自动添加前缀
+```js
+// 当 v-bind:style 使用需要特定前缀的 CSS 属性时，如 transform ，Vue.js 会自动侦测并添加相应的前缀。
 ```
