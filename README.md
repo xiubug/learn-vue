@@ -3,27 +3,49 @@
 Vue.js团队对v2.0版本一次“完全改写”。
 ##vue2.0到底发生了哪些变化?
 变化一：路由配置
+
 所有路由配置都通过一个单独的对象传到 Router 的构造函数。所以可用的选项，参见 [configuration object's type declaration 。](https://github.com/vuejs/vue-router/blob/43183911dedfbb30ebacccf2d76ced74d998448a/flow/declarations.js#L8-L16)
+
 [这里](https://github.com/vuejs/vue-router/blob/43183911dedfbb30ebacccf2d76ced74d998448a/examples/basic/app.js#L18-L22) 是一个新的配置语法的例子.
+
 以下的路由器实例化选项被作废了：
+
 history (被 mode 取代)
+
 abstract (被 mode 取代)
+
 root (被 base 取代)
+
 saveScrollPosition (被 scrollBehavior 取代，后者用起来更加灵活，下面会提到)
+
 hashbang (因为 hashbang 在Google爬站的时候不在需要，所以移除了此选项)
+
 transitionOnLoad (因为 Vue 2.0 有显式的视觉表现过渡动画控制，所以此选项移除)
+
 suppressTransitionError (因为钩子函数的系统的简化而移除)
+
 新的 mode 选项取值为： (默认是 "hash"):
+
 "abstract"
+
 "hash"
+
 "history"
+
 在不支持 history.pushState 的浏览器中, 路由器会自动回退为 hash 模式.
+
 下列方法已经作废：
+
 router.map (被 routes 选项取代)
+
 router.beforeEach (被 beforeEach 选项取代，不过 beta2中有修改，见下面)
+
 router.afterEach (被 afterEach 选项取代，不过 beta2中有修改，见下面)
+
 router.redirect (现在可以在 routes 中直接声明, 参见 Example )
+
 router.alias (现在可以在 routes 配置中直接声明, 参见 Example )
+
 Beta 2 中， beforeEach 和 afterEach 又被改回成为 router 的实例方法。这可以让插件和模块更加方便的在 router 实例创建后增加hooks。
 ##收集了Vue开发中遇到的各种坑、注意事项以及相对解决方案
 知识点一、Vue实例只有这些被代理的属性是响应的。如果在实例创建之后添加新的属性到实例上，它不会触发视图更新。详细请参考[响应系统](http://cn.vuejs.org/v2/guide/reactivity.html)。
