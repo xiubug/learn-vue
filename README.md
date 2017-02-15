@@ -1,22 +1,22 @@
 # learn-vue
 ##简单demo，重点是vue全家桶的搭建
 ###基于Vue.js1.0、Vue-Router、webpack 和 iView实现的SPA框架后台管理系统模版.
-[项目地址](https://github.com/sosout/learn-vue/tree/master/vue-iview)
+[源码地址](https://github.com/sosout/learn-vue/tree/master/vue-iview)
 
-[demo地址](http://iview.sosout.com/)
+[示例](http://iview.sosout.com/)
 
 ###基于Vue.js1.0、Vue-Router、webpack 和 vue-strap实现的SPA框架文档模版.
-[项目地址](https://github.com/sosout/learn-vue/tree/master/vue-strap)
+[源码地址](https://github.com/sosout/learn-vue/tree/master/vue-strap)
 
-[demo地址](http://strap.sosout.com/)
+[示例](http://strap.sosout.com/)
 
 ###基于vue1.0、vuex、vue-router和webpack实现的移动端SPA框架模版.
-[项目地址](https://github.com/sosout/learn-vue/tree/master/vue-wap)
+[源码地址](https://github.com/sosout/learn-vue/tree/master/vue-wap)
 
 ![](https://github.com/sosout/learn-vue/blob/master/vue1.png)
 
 ###基于vue2.0、vuex、vue-router和webpack实现的移动端SPA框架模版.
-[项目地址](https://github.com/sosout/learn-vue/tree/master/vue2-wap)
+[源码地址](https://github.com/sosout/learn-vue/tree/master/vue2-wap)
 
 ![](https://github.com/sosout/learn-vue/blob/master/vue2.png)
 ###重温Vue.js，并将二次学习成果整理成demo分享给大家(v2.0.5)
