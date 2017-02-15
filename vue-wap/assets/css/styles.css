@@ -1,0 +1,343 @@
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+
+/* 全局样式 start */
+
+.warpper {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+}
+
+
+/* 全局样式 end */
+
+
+/* 顶部下载导航 start */
+
+.download-nav {
+    position: relative;
+    margin: 0 auto;
+    width: 7.5rem;
+    height: 1.4rem;
+    background-color: #313131;
+}
+
+.download-nav .close-icon {
+    position: relative;
+    padding: .3rem;
+}
+
+.download-nav .close-icon img {
+    display: block;
+    width: .3rem;
+    height: .3rem;
+}
+
+.download-nav .app-logo {
+    position: relative;
+    background: url(../images/app-logo.png) no-repeat center center;
+    background-size: cover;
+    width: .9rem;
+    height: .9rem;
+}
+
+.download-nav .download-introduce {
+    position: relative;
+    color: #fff;
+    font-size: .28rem;
+    margin-left: .4rem;
+    line-height: 1.5em;
+}
+
+.download-nav .download-btn {
+    position: relative;
+    color: #fff;
+    font-size: .26rem;
+    background-color: #1f8adf;
+    border-radius: 3px;
+    height: .5rem;
+    width: 1.3rem;
+    margin-left: .3rem;
+}
+
+
+/* 顶部下载导航 end */
+
+
+/* 授信认证 start */
+
+.credit-container {
+    position: relative;
+    padding-top: .4rem;
+    margin: 0 auto;
+    width: 7.5rem;
+    overflow: hidden;
+}
+
+.credit-container .credit-tip1 {
+    color: #646464;
+    font-size: .26rem;
+    padding-bottom: .2rem;
+}
+
+.credit-container .credit-tip1:before {
+    content: "";
+    display: inline-block;
+    background-color: #1f8adf;
+    width: .06rem;
+    height: .26rem;
+    margin-right: .25rem;
+}
+
+.credit-container .credit-tip1 .city {
+    font-style: normal;
+    color: #1f8adf;
+    font-size: .26rem;
+}
+
+.credit-container .credit-tip2 {
+    padding: .2rem 0 .4rem .31rem;
+    color: #969696;
+    font-size: .24rem;
+}
+
+.credit-container .mint-field .mint-cell {
+    width: 7.5rem;
+    padding: .18rem .3rem;
+}
+
+.credit-container .mint-field .mint-cell:before,
+.credit-container .mint-field .mint-cell:after {
+    border-bottom: none;
+    border-top: none;
+}
+
+.credit-container .mint-field.b-bottom .mint-cell:before {
+    margin-left: .3rem;
+    width: 7.2rem;
+    border-bottom: 2px solid;
+    color: #ebebeb;
+}
+
+.credit-container .mint-field .mint-cell-title {
+    width: 1.85rem;
+    color: #323232;
+    font-size: .3rem;
+}
+
+.credit-container .mint-field .mint-field-core {
+    font-size: .3rem;
+}
+
+.credit-container .credit-form {
+    position: relative;
+    margin: 0 auto;
+    width: 7.5rem;
+}
+
+.credit-container .credit-form ul {
+    position: relative;
+    background-color: #fff;
+    width: 7.5rem;
+    padding-left: .3rem;
+}
+
+.credit-container .credit-form li {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .3rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.credit-container .credit-form li:last-child {
+    border-bottom: none;
+}
+
+.credit-container .credit-form li .credit-name {
+    display: inline-block;
+    height: .88rem;
+    line-height: .88rem;
+    color: #323232;
+    font-size: .3rem;
+    width: 1.85rem;
+    float: left;
+}
+
+.credit-container .credit-form li .credit-content {
+    display: inline-block;
+    height: .88rem;
+    line-height: .88rem;
+    width: 5rem;
+    color: #969696;
+    float: left;
+}
+
+.credit-container .credit-icon {
+    position: absolute;
+    right: .3rem;
+    top: .37rem;
+    background: url(../images/select-icon.png) no-repeat center center;
+    background-size: cover;
+    width: .26rem;
+    height: .14rem;
+    display: inline-block;
+}
+
+.credit-container .credit-btn {
+    position: relative;
+    background-color: #1f8be0;
+    border-radius: 5px;
+    color: #fff;
+    height: .88rem;
+    line-height: .88rem;
+    width: 6.9rem;
+    margin: .8rem auto 0 auto;
+    text-align: center;
+    font-size: .34rem;
+}
+
+
+/* 授信认证 end */
+
+
+/* 登录界面样式 start */
+
+.login-container {
+    position: relative;
+    width: 7.5rem;
+    min-height: 100%;
+    height: 12.08rem;
+    margin: 0 auto;
+    background: url(../images/login-bg.png) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.login-container .login-logo {
+    position: relative;
+    width: 1.4rem;
+    height: 2rem;
+    background: url(../images/login-logo.png) no-repeat center center;
+    background-size: cover;
+    margin: 1.5rem auto;
+}
+
+.login-container .login-form {
+    position: relative;
+    width: 6.05rem;
+    margin: .7rem auto;
+}
+
+.login-container .login-input .input-label {
+    position: absolute;
+    top: .19rem;
+    font-size: .3rem;
+    z-index: 9;
+    color: #969696;
+}
+
+.login-container .login-input .input-label.top3 {
+    top: -.3rem;
+}
+
+.login-container .login-input {
+    position: relative;
+    height: 1.2rem;
+    margin-top: .22rem;
+    width: 6.05rem;
+}
+
+.login-container .login-input .input-code,
+.login-container .login-input .input-mobile {
+    height: .68rem;
+    padding: .1rem 0;
+    border-bottom: 1px solid #fff;
+}
+
+.login-container .login-input .code-about {
+    position: absolute;
+    top: .1rem;
+    right: 0;
+}
+
+.login-container .code-about .get-code {
+    font-size: .3rem;
+    color: #1f8adf;
+    text-align: right;
+}
+
+.login-container .code-about .forget-code {
+    text-align: right;
+    font-size: .26rem;
+    color: #969696;
+    margin-top: .45rem;
+}
+
+.login-container .login-input .input-code {
+    width: 3.75rem;
+}
+
+.login-container .login-input input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    position: static;
+    z-index: 10;
+    *zoom: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    outline: 0;
+    font-size: inherit;
+    width: 100%;
+    color: #fff;
+    padding: 0;
+    font-size: .3rem;
+}
+
+.login-container .login-btn {
+    width: 6.05rem;
+    height: .88rem;
+    background-color: #1f8adf;
+    border-radius: 30px;
+    margin-top: 1rem;
+    font-size: .3rem;
+    color: #f8f8f8;
+}
+
+/* 登录界面样式 end */
+
+/* 我的认证界面样式 end */
+
+.authent-container {
+    position: relative;
+    width: 7.5rem;
+    min-height: 100%;
+    height: 12.08rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 我的认证界面样式 end */

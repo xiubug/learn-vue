@@ -1,0 +1,6 @@
+{
+  "generator-vuejs": {
+    "includeRouter": true,
+    "includeVuestrap": true
+  }
+}
