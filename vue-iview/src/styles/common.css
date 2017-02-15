@@ -1,0 +1,108 @@
+.console-product {
+    width: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    background: #FFF;
+}
+
+.console-product-body {
+    position: absolute;
+    width: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    overflow-y: auto;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    padding: 0 15px;
+}
+
+.console-sidebar-full .console-product,
+.console-sidebar-full .console-product-body {
+    left: 180px;
+}
+
+
+/* 第三级菜单导航 start */
+
+.console-navbar {
+    position: absolute;
+    width: 0px;
+    float: left;
+    top: 0px;
+    bottom: 0px;
+    z-index: 2;
+    overflow: hidden;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    background-color: #EAEDF1;
+    width: 180px;
+}
+
+.console-navbar .navbar-full {
+    width: 180px;
+}
+
+.console-navbar .product-nav-stage {
+    width: 180px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0;
+}
+
+.console-navbar .product-nav-stage .ivu-menu {
+    width: 200px !important;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.console-navbar .product-nav-stage .ivu-menu.ivu-menu-light {
+    background: #EAEDF1;
+}
+
+.console-navbar .product-nav-stage .ivu-menu-item-group-title {
+    width: 180px;
+    height: 76px;
+    line-height: 76px;
+    background: #D9DEE4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.console-navbar .product-nav-stage .ivu-menu-item {
+    font-size: 12px;
+    padding: 12px 24px;
+    text-indent: 6px;
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+    background: #fff;
+    margin-right: 20px;
+    width: 180px;
+}
+
+.ivu-menu-vertical .ivu-menu-item-group-title {
+    padding-left: 0 !important;
+    text-indent: 20px;
+}
+
+
+/* 第三级菜单导航 end */
