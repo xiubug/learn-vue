@@ -1,24 +1,32 @@
 # learn-vue
-##简单demo，重点是vue全家桶的搭建
+## 前言
+>  本工程主要用于分享vue的学习成果以及个人总结。
+
+>  如果觉得不错的话，请star一下吧 😊
+
+## 演示各式各样的vue全家桶搭建
 ###基于Vue.js1.0、Vue-Router、webpack 和 iView实现的SPA框架后台管理系统模版.
 [源码地址](https://github.com/sosout/learn-vue/tree/master/vue-iview)
 
-[示例](http://iview.sosout.com/)
+[demo](http://iview.sosout.com/)
 
 ###基于Vue.js1.0、Vue-Router、webpack 和 vue-strap实现的SPA框架文档模版.
 [源码地址](https://github.com/sosout/learn-vue/tree/master/vue-strap)
 
-[示例](http://strap.sosout.com/)
+[demo](http://strap.sosout.com/)
 
 ###基于vue1.0、vuex、vue-router和webpack实现的移动端SPA框架模版.
 [源码地址](https://github.com/sosout/learn-vue/tree/master/vue-wap)
 
+### 移动端扫描下方二维码
 ![](https://github.com/sosout/learn-vue/blob/master/vue1.png)
 
 ###基于vue2.0、vuex、vue-router和webpack实现的移动端SPA框架模版.
 [源码地址](https://github.com/sosout/learn-vue/tree/master/vue2-wap)
 
+### 移动端扫描下方二维码
 ![](https://github.com/sosout/learn-vue/blob/master/vue2.png)
+
 ###重温Vue.js，并将二次学习成果整理成demo分享给大家(v2.0.5)
 Vue.js团队对v2.0版本一次“完全改写”。
 ##vue2.0到底发生了哪些变化?
