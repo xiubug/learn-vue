@@ -1,4 +1,4 @@
-# bdback
+# vue-iview管理系统简单demo
 
 本工程适用于基于 Vue.js1.0 + vue-router + webpack + iView 的项目，已经将 iView 配置完成，只需要按步骤初始化即可。
 
@@ -24,4 +24,4 @@ npm run dev
 npm run build
 ```
 ### 访问
-在浏览器地址栏输入[http://127.0.0.1:8080](http://127.0.0.1:8080)
+在浏览器地址栏输入[http://127.0.0.1:8888](http://127.0.0.1:8888)
