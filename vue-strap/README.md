@@ -7,8 +7,6 @@
 
 
 ## 演示
-[源码地址](https://github.com/sosout/learn-vue/tree/master/vue-strap)
-
 [demo](http://strap.sosout.com/)
 
 ## 安装

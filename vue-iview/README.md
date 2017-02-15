@@ -6,8 +6,6 @@
 
 
 ## 演示
-[源码地址](https://github.com/sosout/learn-vue/tree/master/vue-iview)
-
 [demo](http://iview.sosout.com/)
 
 ## 安装

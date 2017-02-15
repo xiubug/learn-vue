@@ -7,9 +7,6 @@
 
 
 ## 演示
-
-[源码地址](https://github.com/sosout/learn-vue/tree/master/vue2-wap)
-
 [demo](http://vue2.sosout.com/)（请用chrome的手机模式预览）
    
 ### 移动端扫描下方二维码
