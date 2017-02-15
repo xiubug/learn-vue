@@ -1,7 +1,7 @@
 {
   "name": "xkhwap",
   "version": "0.0.0",
-  "description": "基于vue、vuex、vue-router实现的移动端SPA框架模版",
+  "description": "基于vue1.0、vuex、vue-router实现的移动端SPA框架模版",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --port 8888 --quiet",

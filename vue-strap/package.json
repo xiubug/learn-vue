@@ -1,10 +1,10 @@
 {
   "name": "vue-strap",
   "version": "0.0.1",
-  "description": "A base project using Vue.js1.0、Vue-Router、webpack and with iView.",
+  "description": "A base project using Vue.js1.0、Vue-Router、webpack and with vueStrap.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --port 3001 --quiet",
+    "dev": "webpack-dev-server --inline --hot --port 8888 --quiet",
     "build": "rd/s/q build && webpack --progress --hide-modules --config webpack.production.js"
   },
   "dependencies": {

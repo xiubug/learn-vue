@@ -1,6 +1,6 @@
 # vue-iview管理系统简单demo
 
-本工程适用于基于 Vue.js1.0 + vue-router + webpack + iView 的项目，已经配置完成，只需要按步骤初始化即可。
+本工程适用于基于 Vue.js1.0 + vue-router + webpack + vue-strap 的项目，已经配置完成，只需要按步骤初始化即可。
 
 ## 安装
 ```bush
