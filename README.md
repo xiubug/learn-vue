@@ -1,4 +1,5 @@
 # learn-vue
+##简单demo，重点是vue全家桶的搭建
 ###基于Vue.js1.0、Vue-Router、webpack 和 iView实现的SPA框架后台管理系统模版.
 [项目地址](https://github.com/sosout/learn-vue/tree/master/vue-iview)
 
