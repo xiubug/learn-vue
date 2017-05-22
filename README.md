@@ -4,6 +4,16 @@
 
 >  如果觉得不错的话，请star一下吧 😊
 
+##### JS/React/Vue/Angular前端群： 599399742
+
+##### 邮&emsp;&emsp;&ensp;箱： sosout@139.com
+
+##### 个人网站： http://www.sosout.com/
+
+##### 个人博客： http://blog.sosout.com/
+
+##### 个人简书： http://www.jianshu.com/users/23b9a23b8849/latest_articles
+
 ## 演示各式各样的vue全家桶搭建
 ###基于Vue.js1.0、Vue-Router、webpack 和 iView实现的SPA框架后台管理系统模版.
 [源码地址](https://github.com/sosout/learn-vue/tree/master/vue-iview)
