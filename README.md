@@ -1,4 +1,11 @@
 # learn-vue
+
+## 相关推荐
+
+[基于react + redux + immutable + less + ES6/7 + webpack2.0 + fetch + react-router + antd(1.x)实现的SPA后台管理系统模板](https://github.com/sosout/react-antd)
+
+[基于vue + vuex + less + ES6/7 + webpack + fetch + vue-router + store + element-ui实现的SPA后台管理系统模板](https://github.com/sosout/vue2-element)
+
 ## 前言
 >  本工程主要用于分享vue的学习成果以及个人总结。
 
